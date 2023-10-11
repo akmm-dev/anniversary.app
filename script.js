@@ -105,7 +105,24 @@ function updateName() {
 function update() {
     let User = document.getElementById('updateName').value.toUpperCase();
     let Partner = document.getElementById('updatepartnerName').value.toUpperCase();
-    localStorage.setItem('name1', User);
-    localStorage.setItem('name2', Partner);
+    if (User == '' && Partner == '') {
+        alert('Please enter a name to update');
+     }
+    else if (User == '') {
+        localStorage.setItem('name2', Partner);
+        localStorage.setItem('name1', localStorage.getItem('name1'));
+    }
+    
+    else if (Partner == '') { 
+        localStorage.setItem('name2', localStorage.getItem('name2'));
+        localStorage.setItem('name1', User);
+    } 
+    else {
+        localStorage.setItem('name1', User);
+        localStorage.setItem('name2', Partner);
+    }
+
+    
     location.reload();
+
 }
