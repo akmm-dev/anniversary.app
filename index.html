@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Our Anniversary</h1>
+        <button class="menu" onclick="menu()">Menu</button>
+    </div>
+    <div class="menuList">
+        <button onclick="deleteAnni()">Delete Anniversary</button>
+        <button onclick="updateName()">Update Name</button>
+    </div>
+    <div class="updateForm">
+        <input type="text" name="" id="updateName" placeholder="Your nickname...">
+        <input type="text" name="" id="updatepartnerName" placeholder="Your partner's nickname...">
+        <input type="button" value="Update" onclick="update()">
+    </div>
+    <div class="form-body" onclick="hidemenu()" >
+            <input type="text" name="" id="userName" placeholder="Your nickname...">
+            <input type="text" name="" id="partnerName" placeholder="Your partner's nickname...">
+            <input type="date" id="date">
+            <input type="submit" value="Confirm" id="btn">
+
+    </div>
+    <div class="main-body" onclick="hidemenu()">
+
+        <div class=" person">
+            <h1 class="person1">Nick</h1>
+            <p>And</p>
+            <h1 class="person2">Jame</h1>
+        </div>
+        <div class="date">
+            <div class="dateHeader">
+                <h1>We have been together for</h1>
+            </div>
+            <div class="dateContent">
+                <div class="datecontent">
+                    <h1 id="year">0</h1>
+                    <p >Years</p>
+                </div>
+                <div class="datecontent">
+                    <h1 id="month">0</h1>
+                    <p >Months</p>
+                
+                </div>
+                <div class="datecontent">
+                    <h1 id="day">0</h1>
+                    <p >Days</p>
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script src="jquery.js"></script>
+</html>
